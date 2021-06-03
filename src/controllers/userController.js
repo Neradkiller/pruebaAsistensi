@@ -1,4 +1,4 @@
-const user = require('../models/userModel')
+const User = require('../models/userModel')
 
 async function addUser(req,res){
     try {
@@ -11,7 +11,7 @@ async function addUser(req,res){
             email
         } = req.body
 
-        const user = user({
+        const user = User({
             firstName,
             lastName,
             cedula,
@@ -36,9 +36,12 @@ async function addUser(req,res){
     }
 }
 
-function updateUser(req,res){
+async function updateUser(req,res){
     try {
-     
+        await User.updateOne({_id: req.params['userId']},req.body)
+        res.status(200).json({
+            message: `User with id:${req.params['userId']} updated`
+        })
     } 
     catch (error) {
         res.status(500).json({
@@ -48,9 +51,12 @@ function updateUser(req,res){
     }
 }
 
-function deleteUser(req,res){
+async function deleteUser(req,res){
     try {
-     
+        await User.deleteOne({_id: req.params['userId']}).exec()
+        res.status(200).json({
+            message: 'User sucefully deleted'
+        })
     } 
     catch (error) {
         res.status(500).json({
@@ -60,9 +66,12 @@ function deleteUser(req,res){
     }
 }
 
-function listUsers(req,res){
+async function listUsers(req,res){
     try {
-     
+        const users = await User.find().lean().exec()
+        res.status(200).json({
+            data: users
+        })
     } 
     catch (error) {
         res.status(500).json({
@@ -72,9 +81,19 @@ function listUsers(req,res){
     }
 }
 
-function getUser(req,res){
+async function getUser(req,res){
     try {
-     
+        let findedUser = await User.findById(req.params['userId'])
+        if(findedUser)
+            res.status(200).json({
+                message: 'User finded',
+                data: findedUser
+            })
+        else
+        res.status(200).json({
+            message: 'User not found',
+            data: findedUser
+        })
     } 
     catch (error) {
         res.status(500).json({

@@ -5,7 +5,7 @@ const userSchema = new Schema({
     firstName: String,
     lastName: String,
     cedula: String,
-    birthdate: Date,
+    birthdate: String,
     phoneNumber: String,
     email: String
 },
