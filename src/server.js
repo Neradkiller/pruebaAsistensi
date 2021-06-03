@@ -3,7 +3,7 @@ require('dotenv').config()
 const app = require('./app')
 const connectDB = require('./db/mongoose')
 
-const port = process.env.APP_PORT || 8081
+const port = process.env.PORT || 8081
 const db_uri = process.env.DB_URI
 
 async function initApp(port, db_uri){
