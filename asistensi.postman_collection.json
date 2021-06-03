@@ -12,10 +12,16 @@
 					"name": "Add user",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhcmVuQGVtYWlsLmNvbSIsImlhdCI6MTYyMjc0OTM1MywiZXhwIjoxNjIzMzU0MTUzLCJpc3MiOiJOZXJhZGtpbGxlciJ9.Ev-sxnyBDyFfKRBORSo1Nx6bCyfXBvbwlVrubIiKzZo",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"Daren\",\r\n    \"lastName\": \"Gonzalez\",\r\n    \"cedula\": \"25545624\",\r\n    \"birthdate\": \"28/02/1997\",\r\n    \"phoneNumber\": \"04125784358\",\r\n    \"email\": \"daren@email.com\",\r\n    \"password\": \"134679\"\r\n}",
+							"raw": "{\r\n    \"firstName\": \"Daren\",\r\n    \"lastName\": \"Gonzalez\",\r\n    \"cedula\": \"25545624\",\r\n    \"birthdate\": \"28/02/1997\",\r\n    \"phoneNumber\": \"04125784358\",\r\n    \"email\": \"daren2@email.com\",\r\n    \"password\": \"134679\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -42,9 +48,15 @@
 					"name": "get usuer",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhcmVuQGVtYWlsLmNvbSIsImlhdCI6MTYyMjc0OTM1MywiZXhwIjoxNjIzMzU0MTUzLCJpc3MiOiJOZXJhZGtpbGxlciJ9.Ev-sxnyBDyFfKRBORSo1Nx6bCyfXBvbwlVrubIiKzZo",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/users/60b8da1373b9352914d6adff",
+							"raw": "http://localhost:8080/api/v1/users/60b9300a576d6c130c1a67af",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -54,7 +66,7 @@
 								"api",
 								"v1",
 								"users",
-								"60b8da1373b9352914d6adff"
+								"60b9300a576d6c130c1a67af"
 							]
 						}
 					},
@@ -91,7 +103,13 @@
 					"name": "Update User",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhcmVuQGVtYWlsLmNvbSIsImlhdCI6MTYyMjc0OTM1MywiZXhwIjoxNjIzMzU0MTUzLCJpc3MiOiJOZXJhZGtpbGxlciJ9.Ev-sxnyBDyFfKRBORSo1Nx6bCyfXBvbwlVrubIiKzZo",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"firstName\": \"Neradkiller\"\r\n}",
@@ -102,7 +120,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/users/60b8da1373b9352914d6adff",
+							"raw": "http://localhost:8080/api/v1/users/60b9300a576d6c130c1a67af",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -112,7 +130,7 @@
 								"api",
 								"v1",
 								"users",
-								"60b8da1373b9352914d6adff"
+								"60b9300a576d6c130c1a67af"
 							]
 						}
 					},
@@ -122,9 +140,15 @@
 					"name": "delete user",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhcmVuQGVtYWlsLmNvbSIsImlhdCI6MTYyMjc0OTM1MywiZXhwIjoxNjIzMzU0MTUzLCJpc3MiOiJOZXJhZGtpbGxlciJ9.Ev-sxnyBDyFfKRBORSo1Nx6bCyfXBvbwlVrubIiKzZo",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/users/60b8da1173b9352914d6adfe",
+							"raw": "http://localhost:8080/api/v1/users/60b9326d576d6c130c1a67b0",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -134,7 +158,67 @@
 								"api",
 								"v1",
 								"users",
-								"60b8da1173b9352914d6adfe"
+								"60b9326d576d6c130c1a67b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"daren@email.com\",\r\n    \"password\":\"134679\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Daren\",\r\n    \"lastName\": \"Gonzalez\",\r\n    \"birthdate\": \"28/02/1997\",\r\n    \"phoneNumber\": \"04125784358\",\r\n    \"email\": \"daren3@email.com\",\r\n    \"password\": \"134679\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"signup"
 							]
 						}
 					},
@@ -144,67 +228,231 @@
 		},
 		{
 			"name": "Remote",
-			"item": []
-		},
-		{
-			"name": "Login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"daren@email.com\",\r\n    \"password\":\"134679\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"daren@email.com\",\r\n    \"password\":\"134679\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://asistensiapptest.herokuapp.com/api/v1/login",
+							"protocol": "https",
+							"host": [
+								"asistensiapptest",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/api/v1/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"v1",
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "signup",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"firstName\": \"Daren\",\r\n    \"lastName\": \"Gonzalez\",\r\n    \"cedula\": \"25g545624\",\r\n    \"birthdate\": \"28/02/1997\",\r\n    \"phoneNumber\": \"04125784358\",\r\n    \"email\": \"darehjn1122e@email.com\",\r\n    \"password\": \"134679\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Daren\",\r\n    \"lastName\": \"Gonzalez\",\r\n    \"birthdate\": \"28/02/1997\",\r\n    \"phoneNumber\": \"04125784358\",\r\n    \"email\": \"darengonzalez@email.com\",\r\n    \"password\": \"134679\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://asistensiapptest.herokuapp.com/api/v1/signup",
+							"protocol": "https",
+							"host": [
+								"asistensiapptest",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"signup"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/api/v1/signup",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"v1",
-						"signup"
-					]
+				{
+					"name": "Adduser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhcmVuZ29uemFsZXpAZW1haWwuY29tIiwiaWF0IjoxNjIyNzU5MDk1LCJleHAiOjE2MjMzNjM4OTUsImlzcyI6Ik5lcmFka2lsbGVyIn0.deXDjNXD3JuNc8XNzq6FBuO2znL6yESiPRk5Hv4mn2M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Daren\",\r\n    \"lastName\": \"Gonzalez\",\r\n    \"cedula\": \"25545624\",\r\n    \"birthdate\": \"28/02/1997\",\r\n    \"phoneNumber\": \"04125784358\",\r\n    \"email\": \"daren2@email.com\",\r\n    \"password\": \"134679\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://asistensiapptest.herokuapp.com/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"asistensiapptest",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar usuarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhcmVuZ29uemFsZXpAZW1haWwuY29tIiwiaWF0IjoxNjIyNzU5MDk1LCJleHAiOjE2MjMzNjM4OTUsImlzcyI6Ik5lcmFka2lsbGVyIn0.deXDjNXD3JuNc8XNzq6FBuO2znL6yESiPRk5Hv4mn2M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://asistensiapptest.herokuapp.com/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"asistensiapptest",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhcmVuZ29uemFsZXpAZW1haWwuY29tIiwiaWF0IjoxNjIyNzU5MDk1LCJleHAiOjE2MjMzNjM4OTUsImlzcyI6Ik5lcmFka2lsbGVyIn0.deXDjNXD3JuNc8XNzq6FBuO2znL6yESiPRk5Hv4mn2M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://asistensiapptest.herokuapp.com/api/v1/users/60b9300a576d6c130c1a67af",
+							"protocol": "https",
+							"host": [
+								"asistensiapptest",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"60b9300a576d6c130c1a67af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhcmVuZ29uemFsZXpAZW1haWwuY29tIiwiaWF0IjoxNjIyNzU5MDk1LCJleHAiOjE2MjMzNjM4OTUsImlzcyI6Ik5lcmFka2lsbGVyIn0.deXDjNXD3JuNc8XNzq6FBuO2znL6yESiPRk5Hv4mn2M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"firstName\": \"DARENX\",\r\n            \"lastName\": \"Gonzalez\",\r\n            \"birthdate\": \"28/02/1997\",\r\n            \"password\": \"134679pipo\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://asistensiapptest.herokuapp.com/api/v1/users/60b9300a576d6c130c1a67af",
+							"protocol": "https",
+							"host": [
+								"asistensiapptest",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"60b9300a576d6c130c1a67af"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhcmVuZ29uemFsZXpAZW1haWwuY29tIiwiaWF0IjoxNjIyNzU5MDk1LCJleHAiOjE2MjMzNjM4OTUsImlzcyI6Ik5lcmFka2lsbGVyIn0.deXDjNXD3JuNc8XNzq6FBuO2znL6yESiPRk5Hv4mn2M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://asistensiapptest.herokuapp.com/api/v1/users/60b9300a576d6c130c1a67af",
+							"protocol": "https",
+							"host": [
+								"asistensiapptest",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"60b9300a576d6c130c1a67af"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }

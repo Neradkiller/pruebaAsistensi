@@ -14,9 +14,18 @@ local, en `.env.example` se encuentra el ejemplo de uso
 
     npm start
 
+## Remote version
+
+La API se encuentra desplegado en la siguiente direccion https://asistensiapptest.herokuapp.com
+
 # REST API
 
 The REST API se describe a continuacion.
+
+## Uso de los token
+
+Los enpoints que poseen seguridad esperan un header con el nombre 
+Authorization con la info en el formato "Bearer {token}" 
 
 ## Get list of all Users
 
