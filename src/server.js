@@ -10,7 +10,7 @@ async function initApp(port, db_uri){
     try
     {
         await connectDB(db_uri)
-        app.listen(port, () => {
+        app.listen(port,'0.0.0.0', () => {
             console.log(`Server listening on port ${port}`)
         })
     }
