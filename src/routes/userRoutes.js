@@ -1,6 +1,8 @@
 const { Router } = require('express')
 const api = Router()
 
+const auth = require('../auth/auth')
+
 const{
     addUser,
     updateUser,
@@ -8,14 +10,16 @@ const{
     listUsers,
     getUser} = require('../controllers/userController')
 
-api.get('/users',listUsers)
+api.get('/users',auth.authenticateJWT,listUsers)
 
-api.get('/users/:userId',getUser)
+api.get('/users/:userId',auth.authenticateJWT,getUser)
 
-api.post('/users',addUser)
+api.post('/users',auth.authenticateJWT,addUser)
 
-api.put('/users/:userId', updateUser)
+api.put('/users/:userId',auth.authenticateJWT, updateUser)
 
-api.delete('/users/:userId', deleteUser)
+api.delete('/users/:userId',auth.authenticateJWT, deleteUser)
+
+
 
 module.exports = api

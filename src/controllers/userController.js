@@ -5,27 +5,37 @@ async function addUser(req,res){
         const{
             firstName,
             lastName,
-            cedula,
             birthdate,
             phoneNumber,
-            email
+            email,
+            password
         } = req.body
 
         const user = User({
             firstName,
             lastName,
-            cedula,
             birthdate,
             phoneNumber,
-            email
+            email,
+            password
         })
 
-        const storedUser = await user.save()
+        const validateUser = await User.findOne( {email:user.email})
+                   
+        console.log(validateUser)
+        if(validateUser){
+            res.status(200).json({
+                message: 'The user already exist'
+            }) 
+        }
+        else{
+            const storedUser = await user.save()
 
-        res.status(201).json({
-            message: 'User successfully created',
-            data: storedUser
-        })
+            res.status(201).json({
+                message: 'User successfully created',
+                data: storedUser
+            })
+        }
     } 
     catch (error) {
         console.log(error)
