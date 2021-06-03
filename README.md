@@ -27,6 +27,13 @@ The REST API se describe a continuacion.
 Los enpoints que poseen seguridad esperan un header con el nombre 
 Authorization con la info en el formato "Bearer {token}" 
 
+## Usuario valido para autenticar
+
+{
+    email:"darengonzalez@email.com",
+    password:"134679"
+}
+
 ## Get list of all Users
 
 Se necesita poseer un token valido
