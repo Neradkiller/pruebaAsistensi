@@ -48,7 +48,6 @@ Se necesita poseer un token valido
 {
     "firstName": "Daren",
     "lastName": "Gonzalez",
-    "cedula": "25g545624",
     "birthdate": "28/02/1997",
     "phoneNumber": "04125784358",
     "email": "daren@email.com",
@@ -108,7 +107,6 @@ Se necesita poseer un token valido
 {
     "firstName": "Daren",
     "lastName": "Gonzalez",
-    "cedula": "25g545624",
     "birthdate": "28/02/1997",
     "phoneNumber": "04125784358",
     "email": "daren@email.com",
